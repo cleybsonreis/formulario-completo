@@ -127,7 +127,33 @@
             </p>
             
         </form>
+        
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">
+        <h1>Demonstração no mode de mostrar na tela, nao calculo com registro ou que mande reais informaçoes</h1>
+        <form action="#" method="post" autocomplete="on">
+            <p>
+                <label for="ipnumero">Primeiro Numero</label>
+                <input type="number" name="segundonumero" id="ipnumero" required 
+                oninput="iresultado.innerHTML = Number(ipnumero.value) + Number(isnumero.value)">
+            </p>
+            <p>
+                <label for="isnumero">Segundo Numero</label>
+                <input type="number" name="segundonumero" id="isnumero"
+                oninput="iresultado.innerHTML = Number(ipnumero.value) + Number(isnumero.value)">
+            </p>
+            <p>
+                <label for="iresultado">Resultado</label>
+                <output name="resultado" id="iresultado">
+                    0
+                </output>
+            </p>
+            <p>
+                <label for="iescala">Escala : </label>
+                <input type="range" name="escala" id="iescala" min="0" max="10" value="5"
+                oninput="ival.innerHTML = Number(iescala.value)" >
+                <output id="ival">5</output>
+            </p>
+        </form>
 </body>
 </html>
